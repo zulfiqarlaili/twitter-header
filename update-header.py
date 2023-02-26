@@ -55,7 +55,6 @@ def draw_profile_on_header(url, header_file,position_x=0,position_y=0):
 def main():
     try:
         fetch_profile_image()
-        print('update twitter header')
         api.update_profile_banner('header.png')
     except tweepy.TweepError as e:
         print("Error: " + str(e))
