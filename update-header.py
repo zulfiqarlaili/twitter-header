@@ -4,10 +4,10 @@ import requests
 from io import BytesIO
 import numpy as np
 
-consumer_key = 'TUsO1lzISC4kMxxaeGJQSK4RJ'
-consumer_secret = 'DiD0jtgc86F4kWDXQtFzvHEsR6XfsWnNFNTVBu7Db4O4BoESPU'
-access_token = '1111803728762302465-jJGLPd4fQ93QZ0OPJwmAcCQ0koxyQD'
-access_token_secret = 'IQVI6L06wcgkoV1F2zPkc0ONpnx64SXl9oocuMpyrJAOU'
+consumer_key = 'xhE7XIhn1GMBIqmsr4GT5pZbq'
+consumer_secret = 'VTsHQka6a1l4pioA9vATsXql8vFe3lw7hD3PWF6rpPHK64QF8w'
+access_token = '1111803728762302465-d9DqYu7TvxkZyD5mTxzdbYOH8Pagup'
+access_token_secret = 'TCpdD2DigyJma7khazwB7fs4VBPF7e28Wz7yKlQYN3r9S'
 
 auth = tweepy.OAuth1UserHandler(
     consumer_key, consumer_secret, access_token, access_token_secret
