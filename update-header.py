@@ -3,14 +3,25 @@ from PIL import Image
 import requests
 from io import BytesIO
 import numpy as np
+from dotenv import load_dotenv
+import os
 
-consumer_key = 'xhE7XIhn1GMBIqmsr4GT5pZbq'
-consumer_secret = 'VTsHQka6a1l4pioA9vATsXql8vFe3lw7hD3PWF6rpPHK64QF8w'
-access_token = '1111803728762302465-d9DqYu7TvxkZyD5mTxzdbYOH8Pagup'
-access_token_secret = 'TCpdD2DigyJma7khazwB7fs4VBPF7e28Wz7yKlQYN3r9S'
+load_dotenv()
+
+consumer_key = os.getenv('CONSUMER_KEY')
+consumer_secret = os.getenv('CONSUMER_SECRET')
+access_token = os.getenv('ACCESS_TOKEN')
+access_token_secret = os.getenv('ACCESS_TOKEN_SECRET')
 
 auth = tweepy.OAuth1UserHandler(
     consumer_key, consumer_secret, access_token, access_token_secret
+)
+
+client = tweepy.Client(
+    consumer_key=consumer_key,
+    consumer_secret=consumer_secret,
+    access_token=access_token,
+    access_token_secret=access_token_secret
 )
 
 api = tweepy.API(auth)
@@ -40,6 +51,8 @@ def get_circle_profile_image(url):
 
 def fetch_profile_image():
     followers = api.get_followers(count=5)
+    # print(client.get_me().data['id'])
+    # followers = client.get_list_followers(client.get_me().data['id'],max_results=5)
     picture_count = 0
     for follower in followers:
         picture_count += 1
