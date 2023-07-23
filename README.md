@@ -2,6 +2,9 @@
 
 `twitter-header` is a Python script using to change your twitter header according to the latest follower. It will fetch list of follower and get the profile picture. The script will draw the image on `header.png`
 
+![Twitter header](header.png)
+
+You can change the header image according to your needs but make sure the dimension is the same.
 ## Prerequisite
 
 - Python 3.11
